@@ -1,0 +1,77 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  overflow-y: scroll;
+  border-bottom: solid black 1px;
+}
+
+.single-country {
+  width: 300px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  margin: 20px;
+  padding: 10px;
+}
+
+.single-country img {
+  width: 80%;
+  align-self: center;
+  margin: auto;
+}
+.country-info {
+  text-decoration: none;
+  width: 80%;
+  align-self: center;
+  background-color: ivory;
+  font-size: 24px;
+  padding: 5px 10px 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: rgb(66, 103, 178);
+  text-align: center;
+  margin-top: 20px;
+}
+
+.single-country:hover {
+  background-color: cornflowerblue;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .single-country {
+    width: 300px;
+    margin: auto;
+    padding: 10px;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .single-country {
+    width: 250px;
+    margin: auto;
+    padding: 5px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1025px) {
+  .container {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
