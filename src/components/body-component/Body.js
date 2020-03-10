@@ -4,9 +4,12 @@ import "./Body.css";
 import { Link } from "react-router-dom";
 
 class Body extends Component {
-  state = {
-    countries: []
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      countries: []
+    };
+  }
 
   url = "https://api.myjson.com/bins/10k58h";
 

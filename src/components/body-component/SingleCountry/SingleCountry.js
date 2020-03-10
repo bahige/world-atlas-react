@@ -4,9 +4,12 @@ import Axios from "axios";
 import Country from "../../Country";
 
 class SingleCountry extends Component {
-  state = {
-    countries: []
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      countries: []
+    };
+  }
 
   url = "https://api.myjson.com/bins/10k58h";
 
