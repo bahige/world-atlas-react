@@ -71,7 +71,9 @@
 
 @media only screen and (min-width: 601px) and (max-width: 768px) {
   .single-country-details {
+    display: block;
     margin: auto;
+    overflow-y: scroll;
   }
 
   /* .city-info {
