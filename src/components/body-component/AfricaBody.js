@@ -7,15 +7,15 @@ class AfricaBody extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      countries: []
+      countries: [],
     };
   }
-  url = "https://api.myjson.com/bins/10k58h";
+  url = "https://api.npoint.io/027afbe0190c9042828c";
 
   componentDidMount() {
-    axios.get(this.url).then(res => {
+    axios.get(this.url).then((res) => {
       this.setState({
-        countries: res.data["countries"]
+        countries: res.data["countries"],
       });
     });
   }
@@ -23,7 +23,7 @@ class AfricaBody extends Component {
   render() {
     const { countries } = this.state;
 
-    const countriesList = countries.map(country => {
+    const countriesList = countries.map((country) => {
       if (country.continent === "Africa") {
         return (
           <Link
